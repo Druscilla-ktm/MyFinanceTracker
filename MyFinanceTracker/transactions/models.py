@@ -34,3 +34,6 @@ class Transactions(models.Model):
     ]
     Categorychoice = models.CharField(max_length=20, choices=CATEGORY_CHOICES)
     Description = models.CharField(max_length=40, blank=True)
+
+    def __str__(self):
+        return(f"Transaction {self.id}: {self.User} : {self.Transactiontype} of {self.Amount} on {self.Date} for {self.Categorychoice} : {self.Description}")
