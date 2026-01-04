@@ -44,12 +44,9 @@ export default function LoginPage() {
             {/* Header */}
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
+                <img src="/icon.png" alt="MyFinanceTracker Logo" className="w-50 h-50" />
               </div>
-              <h1 className="text-3xl font-bold text-foreground">MyFinanceTracker</h1>
-              <p className="text-muted-foreground text-sm mt-2">Track your finances with clarity</p>
+              {/* <h1 className="text-3xl font-bold text-foreground">MyFinanceTracker</h1> */}
             </div>
 
             {/* Form */}

@@ -4,7 +4,8 @@ import type { ReactNode } from "react"
 import { useRouter, usePathname } from "next/navigation"
 import { LayoutDashboard, Receipt, PiggyBank, Target, CreditCard, Calendar, FileText, LogOut, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet"
+import { VisuallyHidden } from "@/components/ui/visually-hidden"
 import { useState } from "react"
 
 interface LayoutProps {
@@ -33,7 +34,8 @@ export function Layout({ children }: LayoutProps) {
 
   const NavContent = () => (
     <div className="flex flex-col h-full">
-      <div className="p-6 border-b border-border">
+      <div className="p-6 border-b border-border flex items-center justify-center space-x-3">
+        <img src="/myfit.png" alt="MyFinanceTracker Logo" className="w-12 h-12" />
         <h2 className="text-xl font-bold text-foreground">MyFinanceTracker</h2>
       </div>
 
@@ -83,10 +85,14 @@ export function Layout({ children }: LayoutProps) {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="p-0 w-64">
+            <VisuallyHidden>
+              <SheetTitle>Navigation Menu</SheetTitle>
+            </VisuallyHidden>
             <NavContent />
           </SheetContent>
         </Sheet>
-        <h1 className="ml-4 font-bold text-lg">MyFinanceTracker</h1>
+        <img src="/myfit.png" alt="MyFinanceTracker Logo" className="ml-4 w-8 h-8" />
+        <h1 className="font-bold text-lg">MyFinanceTracker</h1>
       </div>
 
       {/* Desktop Sidebar */}
