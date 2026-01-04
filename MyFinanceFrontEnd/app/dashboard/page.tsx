@@ -111,8 +111,8 @@ export default function DashboardPage() {
             <CardHeader>
               <CardTitle>Income vs Expenses</CardTitle>
             </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+            <CardContent className="h-64 md:h-80">
+              <ResponsiveContainer width="100%" height="100%">
                 <AreaChart
                   data={[
                     { month: "Jan", income: 4500, expenses: 3200 },
@@ -160,8 +160,8 @@ export default function DashboardPage() {
             <CardHeader>
               <CardTitle>Spending by Category</CardTitle>
             </CardHeader>
-            <CardContent>
-              <ResponsiveContainer width="100%" height={300}>
+            <CardContent className="h-64 md:h-80">
+              <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={[
@@ -175,7 +175,7 @@ export default function DashboardPage() {
                     cy="50%"
                     labelLine={false}
                     label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                    outerRadius={80}
+                    outerRadius={70}
                     fill="#8884d8"
                     dataKey="value"
                   >

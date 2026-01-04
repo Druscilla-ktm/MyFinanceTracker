@@ -100,13 +100,13 @@ export default function LoginPage() {
             </Button>
 
             {/* Demo credentials */}
-            <div className="p-4 rounded-lg bg-info/10 border border-info/20 text-sm">
+            {/*<div className="p-4 rounded-lg bg-info/10 border border-info/20 text-sm">
               <p className="font-semibold mb-2 text-foreground">Demo Account:</p>
               <div className="space-y-1 text-muted-foreground">
                 <p>Email: demo@example.com</p>
                 <p>Password: demo123</p>
               </div>
-            </div>
+            </div> */}
           </CardContent>
         </Card>
       </div>
