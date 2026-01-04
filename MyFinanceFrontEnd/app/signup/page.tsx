@@ -4,7 +4,6 @@ import type React from "react"
 
 import { useState } from "react"
 import { useRouter } from "next/navigation"
-import { DollarSign } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -53,9 +52,7 @@ export default function SignupPage() {
             {/* Header */}
             <div className="text-center">
               <div className="flex justify-center mb-4">
-                <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg">
-                  <DollarSign className="w-8 h-8 text-white" />
-                </div>
+                <img src="/icon.png" alt="MyFinanceTracker Logo" className="w-50 h-50" />
               </div>
               <h1 className="text-3xl font-bold text-foreground">Create Account</h1>
               <p className="text-muted-foreground text-sm mt-2">Start your financial journey today</p>

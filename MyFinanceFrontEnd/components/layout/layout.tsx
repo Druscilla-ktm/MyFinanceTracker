@@ -33,13 +33,13 @@ export function Layout({ children }: LayoutProps) {
   }
 
   const NavContent = () => (
-    <div className="flex flex-col h-full">
-      <div className="p-6 border-b border-border flex items-center justify-center space-x-3">
+    <div className="flex flex-col h-full overflow-hidden">
+      <div className="p-6 border-b border-border flex items-center justify-center space-x-3 flex-shrink-0">
         <img src="/myfit.png" alt="MyFinanceTracker Logo" className="w-12 h-12" />
         <h2 className="text-xl font-bold text-foreground">MyFinanceTracker</h2>
       </div>
 
-      <nav className="flex-1 p-4 space-y-1">
+      <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
         {navItems.map((item) => {
           const Icon = item.icon
           const isActive = pathname === item.href
@@ -61,7 +61,7 @@ export function Layout({ children }: LayoutProps) {
         })}
       </nav>
 
-      <div className="p-4 border-t border-border">
+      <div className="p-4 border-t border-border flex-shrink-0">
         <Button
           variant="ghost"
           className="w-full justify-start text-danger hover:text-danger hover:bg-danger/10"
