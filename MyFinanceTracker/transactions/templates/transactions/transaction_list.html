@@ -1,9 +1,12 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transactions</title>
+    <link rel="stylesheet" href="{% static 'styles/styles.css' %}">
 </head>
 <body>
     <h1>Transaction List</h1>
@@ -12,5 +15,8 @@
             <li>{{ transaction }}</li>
         {% endfor %}
     </ul>
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <img src="{% static 'images/logo.png' %}" alt="Logo">
 </body>
 </html>
